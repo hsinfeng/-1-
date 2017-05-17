@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>請登入</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <style>
+            body {
+                background-image: url("index background.gif");
+                background-position: top;
+            }
+        </style>
+        
+        
+        <script>
+        // src.math，是檢測圖片源文件名稱是否和bulbon匹配的意思，如果一致匹配則執行if,反之執行else！
+           
+            function changeImage()
+                {
+                element=document.getElementById("myimage")
+                if (element.src.match("bulbon"))
+                  {
+                  element.src="bulboff.gif";
+                  }
+                else
+                  {
+                  element.src="bulbon.gif";
+                  }
+                }
+            </script>
+            <div class="container">
+            <img id="myimage" onclick="changeImage()" src="bulbon.gif" >
+            </div><br>
+        
+        
+        <div class="container">
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="userNameTextBox"
+                       class="control-label col-sm-2">
+                    <span class="glyphicon glyphicon-user"></span>
+                    帳號：
+                </label>
+                <div class="col-sm-10">
+                    <input type="text"
+                           id="userNameTextBox" name="userName"
+                           class="form-control"
+                           placeholder="輸入帳號或E-mail" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="passwordTextBox"
+                       class="control-label col-sm-2">
+                    <span class="glyphicon glyphicon-lock"></span>
+                    密碼：
+                </label>
+                <div class="col-sm-10">
+                    <input type="password"
+                           id="passwordTextBox" name="password"
+                           class="form-control"
+                           placeholder="請在此輸入密碼">
+                </div>
+            </div><br>
+            
+             <button type="submit" onclick="button"><img src="cancel.png" height="50px" width="125px"></button>
+        
+            
+             <button type="button" onclick="myfunction()"><img src="login.png" height="50px" width="125px"></button>
+           <script>
+               function myfunction(){
+                   location.replace("shopcart.html");
+                   alert("歡迎登入!");
+               }
+           </script>
+           
+           
+           
+        
+                  
+              
+         
+        
+                     
+            
+            
+                    
+    </body>
+</html>
